@@ -16,7 +16,7 @@ const userRegister = async (req, res) => {
       password,
     });
     if (!user) res.status(500).json({ message: "Something went wrong" });
-    res.status(201).redirect("http://localhost:5173/login");
+    res.status(201).json({ message: "user created successfully" });
   } catch (error) {
     console.error(error);
   }
